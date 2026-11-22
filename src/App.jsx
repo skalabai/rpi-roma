@@ -5,6 +5,7 @@ import About from './components/About/About.jsx'
 import Partners from './components/Partners/Partners.jsx'
 import Lecturers from './components/Lecturers/Lecturers.jsx'
 import LecturerDetail from './components/LecturerDetail/LecturerDetail.jsx'
+import Modal from './components/Modal/Modal.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import { lecturers } from './data/lecturers.js'
@@ -19,7 +20,7 @@ function App() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [page, lecturerId])
+  }, [page])
 
   function handleNavigate(section) {
     setNavActive(section)
@@ -49,8 +50,11 @@ function App() {
 
   function openLecturer(id) {
     setLecturerId(id)
-    setPage('detail')
     setNavActive('lecturers')
+  }
+
+  function closeLecturer() {
+    setLecturerId(null)
   }
 
   return (
@@ -83,20 +87,15 @@ function App() {
         {page === 'lecturers' && (
           <Lecturers lecturers={lecturers} onOpen={openLecturer} />
         )}
-
-        {page === 'detail' && (
-          <LecturerDetail
-            lecturer={selected}
-            onBack={() => {
-              setLecturerId(null)
-              setPage('lecturers')
-              setNavActive('lecturers')
-            }}
-          />
-        )}
       </main>
 
       <Footer />
+
+      {selected && (
+        <Modal title={selected.name} onClose={closeLecturer}>
+          <LecturerDetail lecturer={selected} />
+        </Modal>
+      )}
     </div>
   )
 }

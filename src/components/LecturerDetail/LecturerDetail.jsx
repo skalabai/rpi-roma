@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './LecturerDetail.css'
 
-function LecturerDetail({ lecturer, onBack }) {
+function LecturerDetail({ lecturer }) {
   const [openTariffs, setOpenTariffs] = useState(false)
   const [activeDisc, setActiveDisc] = useState(0)
 
@@ -11,10 +11,6 @@ function LecturerDetail({ lecturer, onBack }) {
 
   return (
     <section className="detail" aria-label={lecturer.name}>
-      <button type="button" className="detail__back" onClick={onBack}>
-        ← К списку лекторов
-      </button>
-
       <div className="detail__card">
         <div className="detail__top">
           <div className="detail__photo-wrap">

@@ -1,0 +1,30 @@
+.about {
+  width: min(var(--max), 100%);
+  margin: 1.25rem auto 0;
+  padding: 0 1rem;
+}
+
+.about__card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 2rem clamp(1.25rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.about__title {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.about__text {
+  margin: 0 auto;
+  max-width: 48rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+}

@@ -1,0 +1,38 @@
+.footer {
+  margin-top: 2rem;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+
+.footer__inner {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  padding: 1.1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer__marks {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.footer__marks span {
+  width: 10px;
+  height: 28px;
+  background: #c5ced9;
+}
+
+.footer__marks span:last-child {
+  background: #1c2430;
+}
+
+.footer__text,
+.footer__copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}

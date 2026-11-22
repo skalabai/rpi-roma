@@ -1,0 +1,115 @@
+.lecturers {
+  width: min(var(--max), 100%);
+  margin: 1.25rem auto 0;
+  padding: 0 1rem;
+}
+
+.lecturers__heading {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.lecturers__list {
+  display: grid;
+  gap: 1rem;
+}
+
+.lecturer-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 1.15rem;
+}
+
+.lecturer-card__photo-wrap {
+  position: relative;
+}
+
+.lecturer-card__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #dfe5ee;
+}
+
+.lecturer-card__accent {
+  height: 4px;
+  background: var(--accent);
+  margin-top: 0.35rem;
+}
+
+.lecturer-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-top: 0.2rem;
+}
+
+.lecturer-card__name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.lecturer-card__meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.lecturer-card__short {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.lecturer-card__tags {
+  margin: 0.2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.lecturer-card__tags li {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.28rem 0.55rem;
+}
+
+/* задание: первый элемент списка выделить псевдоклассом */
+.lecturer-card__tags li:first-child {
+  background: var(--accent);
+  color: #fff;
+}
+
+.lecturer-card__more {
+  align-self: flex-start;
+  margin-top: auto;
+  appearance: none;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-weight: 700;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+}
+
+.lecturer-card__more:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .lecturer-card {
+    grid-template-columns: 1fr;
+  }
+}

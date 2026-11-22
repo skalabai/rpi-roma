@@ -1,0 +1,64 @@
+.partners {
+  width: min(var(--max), 100%);
+  margin: 1.25rem auto 0;
+  padding: 0 1rem;
+}
+
+.partners__heading {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.partners__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.partner-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 1.35rem 1.4rem 1.5rem;
+}
+
+.partner-card__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text);
+  text-decoration: none;
+  margin-bottom: 0.85rem;
+}
+
+.partner-card__brand:hover .partner-card__name {
+  color: var(--accent);
+}
+
+.partner-card__name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.partner-card__arrow {
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.partner-card__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 800px) {
+  .partners__grid {
+    grid-template-columns: 1fr;
+  }
+}

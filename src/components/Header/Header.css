@@ -1,0 +1,37 @@
+.header {
+  background: linear-gradient(180deg, #b8c4d4 0%, #a9b7c9 100%);
+  padding: 0.85rem 1.25rem;
+}
+
+.header__nav {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  justify-content: center;
+}
+
+.header__link {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.35rem 0.2rem;
+  cursor: pointer;
+  opacity: 0.92;
+}
+
+.header__link:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.header__link--active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

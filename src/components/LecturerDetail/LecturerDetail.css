@@ -1,0 +1,146 @@
+.detail {
+  width: min(var(--max), 100%);
+  margin: 1.25rem auto 0;
+  padding: 0 1rem 1rem;
+}
+
+.detail__back {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 0.85rem;
+  padding: 0;
+}
+
+.detail__card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+
+.detail__top {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #dfe5ee;
+}
+
+.detail__accent {
+  height: 4px;
+  background: var(--accent);
+  margin-top: 0.35rem;
+}
+
+.detail__name {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 800;
+}
+
+.detail__line {
+  margin: 0 0 0.4rem;
+  color: var(--muted);
+}
+
+.detail__short {
+  margin: 1rem 0 0;
+  line-height: 1.65;
+}
+
+.detail__block {
+  border-top: 1px solid var(--line);
+  padding-top: 1.1rem;
+  margin-top: 0.4rem;
+}
+
+.detail__block h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.1rem;
+}
+
+.detail__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+}
+
+.detail__tab {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.detail__tab--active,
+.detail__tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.detail__topics {
+  margin: 0;
+  padding-left: 1.15rem;
+  line-height: 1.65;
+}
+
+.detail__topics li:first-child {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.detail__toggle {
+  appearance: none;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-weight: 700;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+}
+
+.detail__toggle:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.detail__tariffs {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.detail__tariffs li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--accent-soft);
+}
+
+.detail__tariffs li:first-child {
+  outline: 2px solid var(--accent);
+}
+
+@media (max-width: 800px) {
+  .detail__top {
+    grid-template-columns: 1fr;
+  }
+}

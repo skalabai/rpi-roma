@@ -10,6 +10,12 @@ function Modal({ title, onClose, children }) {
     onCloseRef.current = onClose
   }, [onClose])
 
+  function handleBackdropClick(event) {
+    if (event.target === event.currentTarget) {
+      onCloseRef.current()
+    }
+  }
+
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key === 'Escape') {
@@ -35,7 +41,7 @@ function Modal({ title, onClose, children }) {
   }, [])
 
   return createPortal(
-    <div className="modal">
+    <div className="modal" onClick={handleBackdropClick}>
       <div
         className="modal__dialog"
         role="dialog"
